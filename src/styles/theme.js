@@ -1,0 +1,37 @@
+
+export const FONT_MONO = "'Source Code Pro', 'Consolas', 'Monaco', monospace";
+export const FONT_UI = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', sans-serif";
+
+export const theme = {
+  bg: '#FFFFFF',
+  panelBg: '#FFFFFF',
+  toolbarBg: '#F0F0F0',
+  menuBg: '#ECECEC',
+  border: '#C8C8C8',
+  borderLight: '#DCDCDC',
+  text: '#333333',
+  textMuted: '#8C8C8C',
+  textLight: '#666666',
+  accent: '#75AADB',
+  accentDark: '#4A8FCA',
+  selection: '#B4D5FE',
+  gutterBg: '#F5F5F5',
+  gutterText: '#AAAAAA',
+  consoleBg: '#FFFFFF',
+  consolePrompt: '#0066FF',
+  consoleOutput: '#333333',
+  consoleError: '#CC0000',
+  tabActive: '#FFFFFF',
+  tabInactive: '#ECECEC',
+  tabBorder: '#C8C8C8',
+  statusBar: '#E8E8E8',
+  scrollbar: '#C0C0C0',
+  hoverBg: '#E8E8E8',
+  keyword: '#003399',
+  string: '#008000',
+  comment: '#999988',
+  number: '#009999',
+  fn: '#795E26',
+  operator: '#333333',
+  variable: '#333333',
+};

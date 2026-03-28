@@ -1,0 +1,17 @@
+node_modules
+dist
+.env.local
+.env
+*.local
+.DS_Store
+.firebase
+
+# local assistant context - not part of app source
+COPILOT_PROMPT.md
+.github/copilot-instructions.md
+
+# avoid leaking credentials if someone drops keys in repo root
+*.key
+*.pem
+serviceAccount*.json
+firebase-adminsdk*.json
