@@ -1,39 +1,31 @@
 # StealthChess
 
-This is a playable chess game wearing an RStudio costume.
+chess disguised as an RStudio session. the board renders as a fake corrplot heatmap, moves go through an R-like console, and the game logic is full chess under the hood. built so it looks like normal analyst work at a glance.
 
-- why it exists: quick chess sessions in plain sight
-- why it is weird: board is rendered as a fake corrplot heatmap
-- why it feels real: console workflow, pane layout, fake analyst session details
+**[live demo →](https://rchess-cbf96.web.app)**
 
-Live app:
-https://rchess-cbf96.web.app
+---
 
-## What You Can Do
+- accepts SAN and coordinate notation (`e4`, `Nf3`, `Bxe5`, `O-O`)
+- minimax AI with alpha-beta pruning, runs entirely in-browser
+- Elo tracking with Google sign-in and cloud profile persistence
+- falls back to a local profile if you stay anonymous
+- boss-mode toggle, R-like console UX
 
-- play from the console with SAN or coordinate notation
-- switch AI depth in Tools -> Global Options
-- sign in with Google and persist Elo + game history
-- play anonymous with local fallback storage
-- toggle boss mode with Esc
-
-## Quick Start
+## run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open http://localhost:3000
+then open `http://localhost:3000`
 
-## Console Commands
+## console commands
 
 ```r
 > move("e4")
 > move("Nf3")
-> move("Bxe5")
-> move("O-O")
-> move("e8=Q")
 > board()
 > help()
 > new_game()
@@ -41,37 +33,20 @@ Then open http://localhost:3000
 > .rs_help()
 ```
 
-Notes:
-- SAN and coordinate input both work
-- if you type raw SAN without move(...), the app nudges you with the expected format
+## firebase setup
 
-## Firebase Setup
-
-1. copy .env.example to .env.local
-2. fill all VITE_FIREBASE_* values
+1. copy `.env.example` to `.env.local`
+2. fill in the `VITE_FIREBASE_*` values
 3. enable Google auth in Firebase Console
-4. create Firestore and deploy firestore.rules
+4. deploy `firestore.rules`
 
-## Deploy
+## deploy
 
 ```bash
 npm run build
 npx firebase-tools deploy --only hosting
 ```
 
-## Safe GitHub Upload Notes
-
-- .env.local and .env are ignored
-- Copilot local instruction files are ignored
-- common key/json credential patterns are ignored
-
-## Tech Stack
-
-- React + Vite
-- custom chess engine (no chess.js dependency)
-- minimax + alpha-beta pruning
-- Firebase Auth + Firestore + Hosting
-
-## License
+## license
 
 MIT
